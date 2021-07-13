@@ -2,7 +2,10 @@ package main
 
 import "fmt"
 
+var x string = "Hello World"
+
 // this is a comment
 func main() {
-	fmt.Println("Hello World")
+	x = "Not Hello World"
+	fmt.Println(x)
 }
