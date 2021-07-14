@@ -3,7 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	for range "test" {
-		fmt.Println("Hello!")
+outer:
+	for i := 1; i <= 10; i++ {
+		switch {
+		case i == 5:
+			break outer
+		default:
+			fmt.Println(i)
+		}
 	}
 }
