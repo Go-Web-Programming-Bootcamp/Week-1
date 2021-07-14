@@ -1,9 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	_ "os" // this is to ignore os package
+)
 
-// this is a comment
+const (
+	x = 5
+	y = 5
+)
+
 func main() {
-	x := "Not Hello World"
 	fmt.Println(x)
+	fmt.Println(y)
 }
