@@ -3,8 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	str := "Hello World!"
-	for ind, char := range str {
-		fmt.Println(ind, char) // Print the index and the character (in integer)
+	for i := 1; i <= 4; i++ {
+		switch i {
+		case 1:
+			fmt.Println("One")
+		case 2:
+			fmt.Println("Two")
+		case 3:
+			fmt.Println("Three")
+		default:
+			fmt.Println("Unknown Number")
+		}
 	}
 }
