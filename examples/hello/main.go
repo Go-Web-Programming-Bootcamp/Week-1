@@ -1,16 +1,10 @@
 package main
 
-import (
-	"fmt"
-	_ "os" // this is to ignore os package
-)
-
-const (
-	x = 5
-	y = 5
-)
+import "fmt"
 
 func main() {
-	fmt.Println(x)
-	fmt.Println(y)
+	str := "Hello World!"
+	for ind, char := range str {
+		fmt.Println(ind, char) // Print the index and the character (in integer)
+	}
 }
