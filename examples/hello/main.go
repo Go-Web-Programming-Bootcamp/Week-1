@@ -1,15 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-outer:
-	for i := 1; i <= 10; i++ {
-		switch {
-		case i == 5:
-			break outer
-		default:
-			fmt.Println(i)
-		}
-	}
+	fmt.Println(strings.Replace("Hello Name!", "Name", "Steven", 1))
 }
