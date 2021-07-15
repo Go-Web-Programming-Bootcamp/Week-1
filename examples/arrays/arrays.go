@@ -9,6 +9,8 @@ func main() {
 	fmt.Println(arr1)
 
 	var arr2 = make([]int64, 3)
-	arr1 = append(arr1, arr2...)
+	arr2[0] = 8
+	arr2[1] = 9
+	arr1 = append(arr1, arr2[0:1]...)
 	fmt.Println(arr1)
 }
