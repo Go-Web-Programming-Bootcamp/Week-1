@@ -2,9 +2,14 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"os"
+	"strconv"
 )
 
 func main() {
-	fmt.Println(strings.Replace("Hello Name!", "Name", "Steven", 1))
+	num, err := strconv.ParseFloat(os.Args[1], 64)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(num)
 }
