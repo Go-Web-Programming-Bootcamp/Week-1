@@ -2,12 +2,26 @@ package main
 
 import "fmt"
 
-func zero(num *int) {
-	*num = 0
+func fillWithOne(arr *[10]int) {
+	for ind := range *arr {
+		arr[ind] = 1
+		// or (*arr)[ind] = 1
+	}
+}
+
+func fillWithOneV2(arr [10]int) {
+	for ind := range arr {
+		arr[ind] = 1
+	}
 }
 
 func main() {
-	num := 5
-	zero(&num)
-	fmt.Println(num)
+	arr := [10]int{}
+	fillWithOne(&arr)
+	fmt.Println(arr)
+
+	arr = [10]int{}
+	fmt.Println(arr)
+	fillWithOne(&arr)
+	fmt.Println(arr)
 }
