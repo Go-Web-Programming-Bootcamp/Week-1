@@ -19,4 +19,14 @@ func main() {
 		log.Fatalln(("There is an error in reading the file"))
 	}
 	fmt.Println(string(text))
+
+	newFile, err := os.Create("./fox.txt")
+	if err != nil {
+		log.Fatalln("There is an error in creating the new file: ", err.Error())
+	}
+	defer newFile.Close()
+
+	str := "Fox is jumping around"
+	bytes := []byte(str)
+	newFile.Write(bytes)
 }
