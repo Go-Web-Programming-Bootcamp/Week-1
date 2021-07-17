@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -19,6 +20,12 @@ func main() {
 		log.Fatalln(("There is an error in reading the file"))
 	}
 	fmt.Println(string(text))
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		currentLine := scanner.Text()
+		fmt.Println(currentLine)
+	}
 
 	newFile, err := os.Create("./fox.txt")
 	if err != nil {
